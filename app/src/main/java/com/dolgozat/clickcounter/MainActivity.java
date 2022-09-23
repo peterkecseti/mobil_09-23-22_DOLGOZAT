@@ -46,22 +46,12 @@ public int value = 0;
         }
     });
 
-    btnAdd.setOnLongClickListener(new View.OnLongClickListener() {
+    textOutput.setOnLongClickListener(new View.OnLongClickListener() {
         @Override
         public boolean onLongClick(View view) {
             value = 0;
             setColor();
             setValue();
-            return true;
-        }
-    });
-    btnRemove.setOnLongClickListener(new View.OnLongClickListener() {
-        @Override
-        public boolean onLongClick(View view) {
-            value = 0;
-            setColor();
-            setValue();
-
             return true;
         }
     });
