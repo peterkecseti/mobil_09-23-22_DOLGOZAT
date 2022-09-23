@@ -41,11 +41,30 @@ public int value = 0;
         @Override
         public void onClick(View view) {
             value--;
-            textOutput.setText(String.valueOf(value));
+            setValue();
             setColor();
         }
     });
 
+    btnAdd.setOnLongClickListener(new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View view) {
+            value = 0;
+            setColor();
+            setValue();
+            return true;
+        }
+    });
+    btnRemove.setOnLongClickListener(new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View view) {
+            value = 0;
+            setColor();
+            setValue();
+
+            return true;
+        }
+    });
     }
 
 
@@ -61,5 +80,10 @@ public int value = 0;
             textOutput.setTextColor(Color.RED);
 
         }
+
+
+    }
+    private void setValue(){
+        textOutput.setText(String.valueOf(value));
     }
 }
